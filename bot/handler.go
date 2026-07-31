@@ -42,6 +42,16 @@ func (s *Commands) Handle(b Bot, line *client.Line) {
 				return
 			}
 
+		// a slight hack to allow commands from people outside irc (like a bridge between irc and discord)
+		// <discordbot> <nickfromdiscord> .command args
+		case strings.HasPrefix(words[0], "<") && strings.HasSuffix(words[0], ">"):
+			direct = true
+			words = words[1:]
+			words[0] = words[0][1:]
+			if len(words) < 1 {
+				return
+			}
+
 		default:
 			return // Not a command.
 		}
