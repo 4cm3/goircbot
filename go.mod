@@ -1,17 +1,17 @@
 module github.com/4cm3/goircbot
 
-go 1.24.0
+go 1.25.0
 
 require (
 	github.com/4cm3/dnssec-analyzer v1.0.0
 	github.com/4cm3/imdb v1.0.16
-	github.com/fluffle/goirc v1.3.3
-	golang.org/x/sys v0.38.0
+	github.com/fluffle/goirc v1.3.4
+	golang.org/x/sys v0.45.0
 )
 
 require (
 	github.com/emersion/go-sasl v0.0.0-20241020182733-b788ff22d5a6 // indirect
 	github.com/golang/glog v1.2.5 // indirect
 	github.com/golang/mock v1.6.0 // indirect
-	golang.org/x/net v0.47.0 // indirect
+	golang.org/x/net v0.55.0 // indirect
 )
